@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "pre-commit": "deno fmt && deno lint && deno test"
+  },
+  "imports": {
+    "x//": "https://deno.land/x/",
+    "std//": "https://deno.land/std@0.177.0/",
+    "npm//fast-check": "npm:fast-check@3.6.3",
+    "deps": "./deps.ts",
+    "mod": "./mod.ts"
+  },
+  "fmt": {
+    "options": {
+      "semiColons": false
+    }
+  }
+}
