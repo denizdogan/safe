@@ -83,3 +83,13 @@ Contributions are welcome! Please open an issue or a pull request.
 ```console
 $ deno fmt && deno lint && deno test
 ```
+
+### Release a new version
+
+- [ ] Run `deno task pre-commit`
+- [ ] Check that documentation is still correct
+- [ ] Update CHANGELOG.md
+  - [ ] Add a new version section
+  - [ ] Add link reference at the bottom
+  - [ ] Commit with message `Release X.Y.Z` - NOT `vX.Y.Z`
+  - [ ] Tag the commit with `vX.Y.Z` - WITH the `v`
