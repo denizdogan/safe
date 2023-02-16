@@ -91,5 +91,5 @@ $ deno fmt && deno lint && deno test
 - [ ] Update CHANGELOG.md
   - [ ] Add a new version section
   - [ ] Add link reference at the bottom
-  - [ ] Commit with message `Release X.Y.Z` - NOT `vX.Y.Z`
-  - [ ] Tag the commit with `vX.Y.Z` - WITH the `v`
+- [ ] Tag the commit with `vX.Y.Z` - WITH the `v`
+- [ ] Commit with message `Release X.Y.Z` - NOT `vX.Y.Z`
