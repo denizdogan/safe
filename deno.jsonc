@@ -3,9 +3,7 @@
     "pre-commit": "deno fmt && deno lint && deno test"
   },
   "imports": {
-    "std//": "https://deno.land/std@0.177.0/",
-    "npm//fast-check": "npm:fast-check@3.6.3",
-    "mod": "./mod.ts"
+    // import maps don't work for libraries
   },
   "fmt": {
     "options": {

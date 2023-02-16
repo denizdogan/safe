@@ -1,7 +1,7 @@
-import fc from "npm//fast-check"
-import { assertEquals, assertThrows } from "std//testing/asserts.ts"
+import { fc } from "../deps.ts"
+import { assertEquals, assertThrows } from "../deps.ts"
 
-import { s, safe } from "mod"
+import { s, safe } from "../mod.ts"
 
 function including(char: string): (str: string) => string {
   if (char.length !== 1) throw new Error("char must be a single character")
