@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog][keep], and this project adheres to
 
 ## [Unreleased]
 
+### Fixed
+
+- TSDoc syntax
+
 ### Changed
 
 - Internal: Enable more lint rules

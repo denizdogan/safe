@@ -1,6 +1,6 @@
 /**
  * Prove that a value is an {@link Array}.
- * @param value A value to check
+ * @param value - Value to check
  * @returns Proof that value is an {@link Array}
  */
 function isArray(value: unknown): value is unknown[] {
@@ -9,7 +9,7 @@ function isArray(value: unknown): value is unknown[] {
 
 /**
  * Prove that a value is a {@link TemplateStringsArray}.
- * @param value A value to check
+ * @param value - Value to check
  * @returns Proof that value is a {@link TemplateStringsArray}
  */
 export function isTemplateStringsArray(
