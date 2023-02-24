@@ -49,7 +49,7 @@ Deno.test("safe does not throw errors for any utf-16", () => {
 })
 
 Deno.test("input string is NOT normalized", () => {
-  assertEquals(safe`\u212b`, "\\u212b")
+  assertEquals(safe("\u212b"), "\\u212b")
 })
 
 Deno.test(
