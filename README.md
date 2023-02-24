@@ -81,7 +81,9 @@ before passing it to Safe.
 Contributions are welcome! Please open an issue or a pull request.
 
 ```console
-$ deno fmt && deno lint && deno test
+$ deno fmt --unstable && \
+  deno lint --unstable && \
+  deno test --unstable --doc
 ```
 
 ### Release a new version
