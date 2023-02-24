@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "pre-commit": "deno fmt && deno lint && deno test"
+    "pre-commit": "deno fmt --unstable && deno lint --unstable && deno test --unstable --doc"
   },
   "imports": {
     // import maps don't work for libraries
