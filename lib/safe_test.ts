@@ -1,35 +1,7 @@
 // deno-lint-ignore-file prefer-ascii
-import { fc } from "../deps.ts"
-import { assertEquals, assertThrows } from "../deps.ts"
-
-import { s, safe } from "../mod.ts"
-
-function including(char: string): (str: string) => string {
-  if (char.length !== 1) throw new Error("char must be a single character")
-  return (s) => {
-    if (s.length === 0) return char
-    if (s.includes(char)) return s
-    const idx = Math.round(Math.random() * (s.length - 1))
-    const arr = Array.from(s)
-    arr.splice(idx, 1, char)
-    return arr.join("")
-  }
-}
-
-Deno.test("withSomeCharacter includes the given char", () => {
-  fc.assert(
-    fc.property(
-      fc.char16bits(),
-      fc.stringOf(fc.char16bits(), { minLength: 0, maxLength: 1000 }),
-      (char, str) => including(char)(str).includes(char),
-    ),
-  )
-})
-
-Deno.test("withSomeCharacter throws error on invalid chars", () => {
-  assertThrows(() => including(""), Error, "single character")
-  assertThrows(() => including("ab"), Error, "single character")
-})
+import { asserts, fc } from "../deps.ts"
+import { s, safe } from "./safe.ts"
+const { assertEquals } = asserts
 
 Deno.test("s is identical to safe", () => {
   assertEquals(safe, s)
