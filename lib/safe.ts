@@ -1,6 +1,8 @@
 import { SafeParams } from "./types.ts"
 import { isTemplateStringsArray } from "./utils.ts"
 
+const UNKNOWN_CODE_POINT_STRING = "?"
+
 /**
  * Safely escape unsafe characters in a string.
  * @param str Input string
@@ -27,7 +29,7 @@ function safened(str: string): string {
       default: {
         const cp = m.codePointAt(0)
         if (cp === undefined) {
-          return "?"
+          return UNKNOWN_CODE_POINT_STRING
         } else if (cp <= 0xFF) {
           return `\\x${cp.toString(16).padStart(2, "0")}`
         } else if (cp <= 0xFFFF) {
@@ -35,7 +37,7 @@ function safened(str: string): string {
         } else if (cp <= 0x10FFFF) {
           return `\\u{${cp.toString(16).padStart(6, "0")}}`
         } else {
-          return "?"
+          return UNKNOWN_CODE_POINT_STRING
         }
       }
     }
