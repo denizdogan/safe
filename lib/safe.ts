@@ -4,9 +4,9 @@ import { isTemplateStringsArray } from "./utils.ts"
 const UNKNOWN_CODE_POINT_STRING = "?"
 
 /**
- * Safely escape unsafe characters in a string.
- * @param str Input string
- * @returns A string with unsafe characters replaced by escape sequences.
+ * Get a safe representation of a string.
+ * @param str - Potentially unsafe string
+ * @returns Safe representation of `str`
  */
 function safened(str: string): string {
   const rx = /[^\x20-\x7E]/gu
@@ -47,8 +47,15 @@ function safened(str: string): string {
 
 /**
  * Get a safe representation of a string.
+ * Can be used either as a template tag function or a regular function.
  * @param str - Potentially unsafe string
  * @returns Safe representation of `str`
+ * @example
+ * ```ts
+ * import { safe } from "https://deno.land/x/safe/mod.ts";
+ * safe("Hello, world!");
+ * safe`Hello, world!`;
+ * ```
  */
 export function safe(...[first, ...rest]: SafeParams): string {
   if (isTemplateStringsArray(first)) {
