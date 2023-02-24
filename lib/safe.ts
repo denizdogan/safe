@@ -28,8 +28,6 @@ function safened(str: string): string {
         const cp = m.codePointAt(0)
         if (cp === undefined) {
           return "?"
-        } else if (cp <= 0x09) {
-          return `\\x${cp.toString(16).padStart(2, "0")}`
         } else if (cp <= 0xFF) {
           return `\\x${cp.toString(16).padStart(2, "0")}`
         } else if (cp <= 0xFFFF) {
