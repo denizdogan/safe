@@ -6,7 +6,7 @@ import { isTemplateStringsArray } from "./utils.ts"
  * @param str Input string
  * @returns A string with unsafe characters replaced by escape sequences.
  */
-function safened(str: string) {
+function safened(str: string): string {
   const rx = /[^\x20-\x7E]/gu
   const repl = (m: string) => {
     switch (m) {
