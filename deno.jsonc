@@ -5,6 +5,24 @@
   "imports": {
     // import maps don't work for libraries
   },
+  "lint": {
+    "rules": {
+      "include": [
+        "ban-untagged-todo",
+        "default-param-last",
+        "eqeqeq",
+        "explicit-function-return-type",
+        "explicit-module-boundary-types",
+        "no-const-assign",
+        "no-eval",
+        "no-external-import",
+        "no-sparse-arrays",
+        "no-throw-literal",
+        "no-top-level-await",
+        "prefer-ascii"
+      ]
+    }
+  },
   "fmt": {
     "options": {
       "semiColons": false
