@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep], and this project adheres to
 [Semantic Versioning][semver].
 
+## [Unreleased]
+
+### Changed
+
+- Internal: Enable more lint rules
+
 ## [0.1.0] - 2023-02-16
 
 - Don't use import maps
@@ -13,6 +19,7 @@ The format is based on [Keep a Changelog][keep], and this project adheres to
 
 - Published to deno.land/x
 
+[unreleased]: https://github.com/denizdogan/safe/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/denizdogan/safe/releases/tag/v0.1.0
 [0.0.1]: https://github.com/denizdogan/safe/releases/tag/v0.0.1
 [keep]: https://keepachangelog.com/en/1.0.0/
