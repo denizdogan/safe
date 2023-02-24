@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog][keep], and this project adheres to
 ### Changed
 
 - Internal: Enable more lint rules
+- Internal: Update deno_std 0.177.0 to 0.178.0
 
 ## [0.1.0] - 2023-02-16
 
