@@ -1,3 +1,4 @@
+// deno-lint-ignore-file prefer-ascii
 import { fc } from "../deps.ts"
 import { assertEquals, assertThrows } from "../deps.ts"
 
