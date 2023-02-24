@@ -46,9 +46,9 @@ function safened(str: string): string {
 }
 
 /**
- * Safely escape unsafe characters in a string.
- * @param str Input string
- * @returns A string with unsafe characters replaced by escape sequences.
+ * Get a safe representation of a string.
+ * @param str - Potentially unsafe string
+ * @returns Safe representation of `str`
  */
 export function safe(...[first, ...rest]: SafeParams): string {
   if (isTemplateStringsArray(first)) {
